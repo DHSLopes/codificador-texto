@@ -1,6 +1,4 @@
-let mensagens = document.getElementById('container__direito__texto');
-
-function criptografar(){
+function criptografarTexto() {
     let textoDigitado = document.getElementById('txtTextoDigitado').value;
     textoDigitado = textoDigitado.toLowerCase();
     textoDigitado = textoDigitado.replace(/e/g, "enter");
@@ -9,10 +7,10 @@ function criptografar(){
     textoDigitado = textoDigitado.replace(/o/g, "ober");
     textoDigitado = textoDigitado.replace(/u/g, "ufat");
     manipulaImagem();
-    manipulaMensagens();
+    manipulaMensagens(textoDigitado);
 }
 
-function descriptografar(){
+function descriptografarTexto() {
     let textoDigitado = document.getElementById('txtTextoDigitado').value;
     textoDigitado = textoDigitado.toLowerCase();
     textoDigitado = textoDigitado.replace(/enter/g, "e");
@@ -20,14 +18,22 @@ function descriptografar(){
     textoDigitado = textoDigitado.replace(/ai/g, "a");
     textoDigitado = textoDigitado.replace(/ober/g, "o");
     textoDigitado = textoDigitado.replace(/ufat/g, "u");
-    mensagens.removeAttribute = "hidden";
     manipulaImagem();
-    manipulaMensagens();
+    manipulaMensagens(textoDigitado);
 }
 
-function manipulaImagem(){
-    let imagem = document.getElementById('container__direito__imagem').style;
-    console.log(imagem + " --------");
+function copiarTexto(){
+    let textoParaCopiar = document.getElementById('txtTextoGerado').value;
+    let span = document.getElementById('spanCopiadoComSucesso');
+    navigator.clipboard.writeText(textoParaCopiar);
+    span.style.display = 'block';
+    setTimeout(function() {
+        span.style.display = 'none';
+    }, 3000);
+}
+
+function manipulaImagem() {
+    let imagem = document.getElementById('imgImagem');
     if(imagem.style.display == 'none'){
         imagem.style.display = 'block';
     }
@@ -36,12 +42,20 @@ function manipulaImagem(){
     }
 }
 
-function manipulaMensagens(){
-    let mensagem = document.getElementById('container__direito__texto');
-    if(mensagem.style.display == 'none'){
-        mensagem.style.display = 'block';
+function manipulaMensagens(msg) {
+    let texto = document.getElementById('txtTextoGerado');
+    let nenhuma = document.getElementById('pNenhumaMensagem');
+    let botaoCopiar = document.getElementById('btnCopiar');
+    if(texto.style.display == 'none'){
+        texto.style.display = 'block';
+        texto.value += msg + "\n";
+        nenhuma.style.display = 'none';
+        botaoCopiar.style.display = 'block';
     }
     else{
-        mensagem.style.display = 'none';
+        texto.style.display = 'none';
+        texto.value = "";
+        nenhuma.style.display = 'block';
+        botaoCopiar.style.display = 'none';
     }
 }
