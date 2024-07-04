@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+:root{
+    --cor-primaria: #F3F5FC;
+    --cor-secundaria: #0A3871;
+    --cor-terciaria: #D8DFE8;
+    --fonte-primaria: "Inter", sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    background-color: var(--cor-primaria);
+    display: flex;
+    justify-content: space-between;
+    color: var(--cor-secundaria);
+}
+
+.container {
+    margin: auto;
+    width: 80%;
+    height: 100%;
+    background-color: var(--cor-primaria);
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.container__logo {
+    width: 120px;
+    color: #333;
+    font-weight: bold;
+}
+
+.container__esquerdo{
+    display: flex;
+    flex-direction: column;
+}
+
+.container__esquerdo__texto{
+    background-color: var(--cor-primaria);
+    border: 0px;
+    font-family: var(--fonte-primaria);
+    font-size: 32px;
+    font-weight: 400;
+}
+
+.container__botoes {
+    font-family: var(--fonte-primaria);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.container__esquerdo__exclamacao{
+    width: 1em;
+    height: 1em;
+}
+
+.container__esquerdo {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+button {
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.container__esquerdo__botao_criptografar {
+    background-color: var(--cor-secundaria);
+    color: #fff;
+}
+
+.container__esquerdo__botao_descriptografar {
+    background-color: var(--cor-terciaria);
+    color: var(--cor-secundaria);
+}
+
+.container__esquerdo__botao_criptografar:hover {
+    background-color: #0062cc;
+}
+
+.container__esquerdo__botao_descriptografar:hover {
+    background-color: #ccc;
+}
+
+.container__direito {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.container__mensagens__nenhuma{
+    font-family: var(--fonte-primaria);
+    font-size: 1.5em;
+    color: var(--cor-secundaria);
+    text-align: center;
+}
+
+.container__mensagens__mensagem{
+    font-family: var(--fonte-primaria);
+    font-size: 1em;
+    color: var(--cor-secundaria);
+    text-align: center;
+}
+
+.container__direito__texto{
+    display: none;
+}
+
+.container__direito__imagem {
+    display: block;
+    max-width: 100%;
+}

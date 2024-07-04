@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="src/app.js"></script>
+    <script src="https://code.responsivevoice.org/responsivevoice.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Inter:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Codificador de Texto</title>
+</head>
+<body>
+    <div class="container">
+        <div class="container__esquerdo">
+            <img src="assets/alura-logo.png" class="container__logo">
+            <input type="text" placeholder="Digite seu texto" class="container__esquerdo__texto" id="txtTextoDigitado">
+            <section>
+                <strong><p class="container__info"><img src="assets/exclamacao.png" class="container__esquerdo__exclamacao">Apenas letras minúsculas e sem acento.</p></strong>
+                <div class="container__botoes">
+                    <button class="container__esquerdo__botao_criptografar" onclick="criptografar()">Criptografar</button>
+                    <button class="container__esquerdo__botao_descriptografar" onclick="descriptografar()">Descriptografar</button>
+                </div>
+            </section>
+        </div>
+        <div class="container__direito">
+            <input type="text" class="container__direito__texto" id="container__direito__texto">
+            <img src="assets/imagem-menina.png" alt="Imagem ilustrativa" class="container__direito__imagem">
+            <p class="container__mensagens__nenhuma"><strong>Nenhuma mensagem encontrada</strong></p>
+            <p class="container__mensagens__mensagem">Digite um texto que você deseja criptografar ou descriptografar.</p>
+        </div>
+    </div>
+</body>
+</html>
