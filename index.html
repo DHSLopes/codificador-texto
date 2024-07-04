@@ -13,15 +13,13 @@
     <title>Codificador de Texto</title>
 </head>
 <body>
-    <header class="cabecalho">
-        <nav class="cabecalho__menu">
-            <img src="assets/alura-logo.png" class="cabecalho__menu__logo">
-        </nav>
-    </header>
-    <main>
+    <main class="conteudo">
+        <section class="lateral">
+            <img src="assets/alura-logo.png" class="lateral__logo">
+        </section>
         <section class="container">
             <div class="container__esquerdo">
-                <textarea rows="10" placeholder="Digite seu texto" class="container__esquerdo__texto" id="txtTextoDigitado"></textarea>
+                <textarea rows="10" placeholder="Digite seu texto" class="container__esquerdo__texto" id="txtTextoDigitado" required></textarea>
                 <section>
                     <strong>
                         <p class="container__esquerdo__info">
@@ -41,8 +39,8 @@
                     <strong>Nenhuma mensagem encontrada</strong><br>
                     Digite um texto que você deseja criptografar ou descriptografar.
                 </p>
-                <textarea rows="10" class="container__direito__texto" id="txtTextoGerado" style="display: none;" disabled></textarea>
-                <section>
+                <section class="container__direito__secao">
+                    <textarea rows="10" class="container__direito__texto" id="txtTextoGerado" style="display: none;" disabled></textarea>
                     <button class="container__direito__botao_copiar" id="btnCopiar" onclick="copiarTexto()" style="display: none;">Copiar</button>
                     <span class="container__direito__span" id="spanCopiadoComSucesso" style="display: none;">Texto copiado com sucesso!</span>
                 </section>
