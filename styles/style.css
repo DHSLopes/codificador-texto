@@ -257,7 +257,11 @@ button {
         flex-direction: column;
         width: 100%;
     }
-    .container__esquerdo__botao_criptografar, .container__esquerdo__botao_descriptografar{
+    .container__esquerdo__botao_criptografar, .container__esquerdo__botao_descriptografar, .container__direito__botao_copiar{
         width: 100%;
+    }
+
+    .container__direito{
+        padding: 0px 0px 30px 0px;
     }
 }
