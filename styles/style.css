@@ -43,15 +43,14 @@ body {
 }
 
 .lateral__logo{
-    padding: 30px 0px 0px 0px;
-    width: 120px;
+    padding: 2rem 0px 0px 3rem;
+    width: 32px;
     color: #333;
     font-weight: bold;
 }
 
 .container {
     margin: 5% 0% 0% 0%;
-    /*border: 1px solid black;*/
     width: 90%;
     height: 100%;
     background-color: var(--cor-primaria);
@@ -180,10 +179,18 @@ button {
     outline-color: white;
 }
 
-.container__mensagens__mensagem{
+.container__direito__mensagem{
+    font-family: var(--fonte-primaria);
+    font-weight: 700;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.container__direito__mensagem2{
     font-family: var(--fonte-primaria);
     text-align: center;
     font-size: 1rem;
+    padding-top: 16px;
 }
 
 .container__direito__imagem {
@@ -208,4 +215,49 @@ button {
 .container__direito__span {
     font-family: var(--fonte-primaria);
     font-size: 0.8rem;
+}
+
+@media (max-width: 1200px) {
+    *{
+        margin: 0px;
+        padding: 0px;
+    }
+    .conteudo{
+        width: 100%;
+        flex-direction: column;
+        padding: 5%;
+    }
+
+    .lateral{
+        width: 100%;
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .lateral__logo{
+        padding: 0px;
+        height: 46px;
+        width: 31px;
+    }
+    .container{
+        display: flex;
+        flex-direction: column;
+        width: auto;
+    }
+    .container__esquerdo{
+        padding: 0px 0px 30px 0px;
+    }
+    
+    .container__esquerdo__texto{
+        margin: 0px;
+    }
+
+    .container__esquerdo__botoes{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .container__esquerdo__botao_criptografar, .container__esquerdo__botao_descriptografar{
+        width: 100%;
+    }
 }

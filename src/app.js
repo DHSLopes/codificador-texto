@@ -23,11 +23,13 @@ function manipulaImagem() {
 function manipulaMensagens(msg) {
     let texto = document.getElementById('txtTextoGerado');
     let nenhuma = document.getElementById('pNenhumaMensagem');
+    let nenhuma2 = document.getElementById('pNenhumaMensagem2');
     let botaoCopiar = document.getElementById('btnCopiar');
     if(texto.style.display == 'none'){
             texto.style.display = 'block';
             texto.value += msg;
             nenhuma.style.display = 'none';
+            nenhuma2.style.display = 'none';
             botaoCopiar.style.display = 'block';
     }
     else{
